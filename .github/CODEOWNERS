@@ -61,3 +61,8 @@ CHANGELOG @release-team
 
 # Test case: Everything in a subdirectory
 /vendor/ @dependencies-team
+
+# Test case: Email addresses as owners (alternative to GitHub usernames)
+/experimental/ experiment-team@example.com
+
+# Test case: Comments and blank lines should be ignored by parsers
