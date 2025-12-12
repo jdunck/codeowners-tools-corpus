@@ -49,7 +49,8 @@ CHANGELOG @release-team
 *.map @build-team
 
 # Test case: Documentation in different locations
-*.md @docs-team
+# Note: This tests precedence - /docs/**/*.md is more specific and will override *.md for docs directory
+*.md @docs-team @technical-writers
 /docs/**/*.md @docs-specialists
 
 # Test case: Deeply nested paths

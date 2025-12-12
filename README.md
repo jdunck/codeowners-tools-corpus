@@ -8,16 +8,15 @@ This repository contains a comprehensive test corpus for validating CODEOWNERS t
 ## Test Cases Included
 
 ### 1. Basic File Extension Patterns
-- `*.js` → @js-team
+- `*.js` → @js-team @web-team (multiple owners)
 - `*.ts` → @typescript-team
 - `*.py` → @python-team
-- `*.md` → @docs-team
+- `*.md` → @docs-team @technical-writers (multiple owners)
 
 **Test Files:**
 - `app.js` - JavaScript file
 - `main.ts` - TypeScript file
 - `script.py` - Python file
-- `GUIDE.md` - Markdown file
 
 ### 2. Root-Specific vs Non-Root Patterns
 - `/README.md` → @project-leads (only matches root)
@@ -96,11 +95,10 @@ This repository contains a comprehensive test corpus for validating CODEOWNERS t
 - `src/deep/nested/path/components/Widget.js`
 
 ### 11. Documentation Specificity
-- `*.md` → @docs-team (general)
+- `*.md` → @docs-team @technical-writers (general)
 - `/docs/**/*.md` → @docs-specialists (more specific)
 
 **Test Files:**
-- `GUIDE.md` - General markdown
 - `docs/README.md` - In docs directory
 - `docs/guides/installation.md` - Nested in docs
 
