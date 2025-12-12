@@ -1,0 +1,4 @@
+# Test file in /config/ - should be owned by @devops-team @security-team
+production:
+  host: db.example.com
+  port: 5432
