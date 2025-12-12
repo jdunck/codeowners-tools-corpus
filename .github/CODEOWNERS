@@ -5,10 +5,10 @@
 * @global-owner
 
 # Test case: Simple file extension patterns
-*.js @js-team
+*.js @js-team @web-team
 *.ts @typescript-team
 *.py @python-team
-*.md @docs-team
+*.md @docs-team @technical-writers
 
 # Test case: Specific file in root
 /README.md @project-leads
