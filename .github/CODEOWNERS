@@ -1,0 +1,69 @@
+# CODEOWNERS Test Corpus
+# This file contains various patterns to test CODEOWNERS tooling edge cases
+
+# Default owners for everything in the repo (unless a later match takes precedence)
+* @global-owner
+
+# Test case: Simple file extension patterns
+*.js @js-team @web-team
+*.ts @typescript-team
+*.py @python-team
+*.md @docs-team @technical-writers
+
+# Test case: Specific file in root
+/README.md @project-leads
+
+# Test case: Directory ownership (all files in a directory)
+/src/ @src-team
+/docs/ @docs-team
+/tests/ @qa-team
+
+# Test case: Specific directory with wildcard
+/src/**/*.test.js @qa-team
+
+# Test case: Nested directory patterns
+/src/components/ @frontend-team
+/src/components/buttons/ @ui-team
+
+# Test case: Multiple owners for same pattern
+/config/ @devops-team @security-team
+
+# Test case: Files with special characters
+/files-with-spaces/ @special-files-team
+/files.with.dots/ @special-files-team
+/files-with-dashes/ @special-files-team
+
+# Test case: Pattern precedence (more specific pattern should win)
+*.config.js @config-team
+/src/app.config.js @app-team
+
+# Test case: Root vs non-root patterns
+# /LICENSE matches only in root
+/LICENSE @legal-team
+# LICENSE (without /) matches anywhere
+CHANGELOG @release-team
+
+# Test case: Build and generated files
+/dist/ @build-team
+*.min.js @build-team
+*.map @build-team
+
+# Test case: Documentation in different locations
+# Note: This tests precedence - /docs/**/*.md is more specific and will override *.md for docs directory
+*.md @docs-team @technical-writers
+/docs/**/*.md @docs-specialists
+
+# Test case: Deeply nested paths
+/src/deep/nested/path/components/ @nested-team
+
+# Test case: Escaped special characters
+# Pattern with brackets
+/\[special\]/ @special-team
+
+# Test case: Everything in a subdirectory
+/vendor/ @dependencies-team
+
+# Test case: Email addresses as owners (alternative to GitHub usernames)
+/experimental/ experiment-team@example.com
+
+# Test case: Comments and blank lines should be ignored by parsers

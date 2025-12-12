@@ -1,0 +1,1 @@
+Test file with spaces in directory name - should be owned by @special-files-team
