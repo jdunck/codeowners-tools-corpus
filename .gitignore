@@ -1,0 +1,10 @@
+# Test gitignore file
+# This helps test that CODEOWNERS tools handle ignored files correctly
+
+# Dependency directories
+node_modules/
+__pycache__/
+
+# Build outputs
+*.log
+.DS_Store
